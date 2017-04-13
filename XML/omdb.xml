@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <movies>
     <movie 
         title="Passengers" 
@@ -19,7 +18,8 @@
         imdbRating="7.0" 
         imdbVotes="160,204" 
         imdbID="tt1355644" 
-        type="movie"/>
+        type="movie">
+    </movie>
     <movie 
         title="The StarWars Adventures" 
         year="2016" 
@@ -39,7 +39,8 @@
         imdbRating="N/A" 
         imdbVotes="N/A" 
         imdbID="tt5814352" 
-        type="series"/>
+        type="series">
+    </movie>
     <movie 
         title="The Cure" 
         year="1995" 
@@ -59,5 +60,6 @@
         imdbRating="7.7" 
         imdbVotes="7,828" 
         imdbID="tt0112757" 
-        type="movie"/>
+        type="movie">
+    </movie>
 </movies>

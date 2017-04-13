@@ -21,7 +21,7 @@ import org.xml.sax.SAXException;
  *
  * @author 1147106
  */
-public class XManXMLParser {
+public class MovieXMLParser {
 
     public static List<Movie> parseFile(File file) {
         List<Movie> movies = new ArrayList<>();
@@ -48,6 +48,7 @@ public class XManXMLParser {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
         try {
+            System.out.println("File recebido: " + file.getName());
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document document = db.parse(file);
 
@@ -81,7 +82,7 @@ public class XManXMLParser {
                     poster = m.getAttribute("poster");
                     metascore = m.getAttribute("metascore");
                     imdbRating = Float.parseFloat(m.getAttribute("imdbRating"));
-                    imgdbVoter = Integer.parseInt(m.getAttribute("imdbVotes").replaceAll(",", ""));
+                    imdbVotes = Integer.parseInt(m.getAttribute("imdbVotes").replaceAll(",", ""));
                     imdbId = m.getAttribute("imdbID");
                     type = m.getAttribute("type");
                     
@@ -94,11 +95,11 @@ public class XManXMLParser {
             }
 
         } catch (ParserConfigurationException ex) {
-            Logger.getLogger(XManXMLParser.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MovieXMLParser.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SAXException ex) {
-            Logger.getLogger(XManXMLParser.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MovieXMLParser.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(XManXMLParser.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MovieXMLParser.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return movies;
