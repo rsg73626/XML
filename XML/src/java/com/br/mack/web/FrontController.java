@@ -34,7 +34,7 @@ public class FrontController extends HttpServlet {
             throws ServletException, IOException {
 
         try {
-            request.setAttribute("movies", MovieXMLParser.parseFile(new File("C:\\Temp\\XML\\XML\\omdb.xml")));
+            request.getSession().setAttribute("movies", MovieXMLParser.parseFile(new File("C:\\Temp\\XML\\XML\\src\\java\\omdb.xml")));
         } catch (Exception e) {
             System.out.println("deu ruim");
             e.printStackTrace();

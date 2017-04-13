@@ -13,7 +13,7 @@
             </c:when>
             <c:otherwise>
                 <c:forEach items="${movies}" var="m">
-                    ${m}<br/>
+                    ${m}<br/><br/>
                 </c:forEach>
             </c:otherwise>
         </c:choose>

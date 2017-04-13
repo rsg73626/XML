@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmen>
+    <xman id="1">
+        <name>Wolverine</name>
+        <skill>Badass</skill>
+        <status>
+            <hp>10</hp>
+        </status>
+    </xman>
+    
+    <xman id="2">
+        <name>Cyclops</name>
+        <skill>fancy glasses</skill>
+        <status>
+            <hp>5</hp>
+        </status>
+    </xman>
+    
+    <xman id="3">
+        <name>Storm</name>
+        <skill>fly</skill>
+        <status>
+            <hp>8</hp>
+        </status>
+    </xman>
+</xmen>

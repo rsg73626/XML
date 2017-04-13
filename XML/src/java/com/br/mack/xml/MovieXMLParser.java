@@ -40,8 +40,6 @@ public class MovieXMLParser {
         String awards;
         String poster;
         String metascore;
-        float imdbRating;
-        int imdbVotes;
         String imdbId;
         String type;
 
@@ -81,13 +79,11 @@ public class MovieXMLParser {
                     awards = m.getAttribute("awards");
                     poster = m.getAttribute("poster");
                     metascore = m.getAttribute("metascore");
-                    imdbRating = Float.parseFloat(m.getAttribute("imdbRating"));
-                    imdbVotes = Integer.parseInt(m.getAttribute("imdbVotes").replaceAll(",", ""));
                     imdbId = m.getAttribute("imdbID");
                     type = m.getAttribute("type");
                     
 
-                    Movie movie = new Movie(title, year, rated, released, runtime, genres, director, writer, actors, plot, language, country, awards, poster, metascore, imdbRating, imdbVotes, imdbId, type);
+                    Movie movie = new Movie(title, year, rated, released, runtime, genres, director, writer, actors, plot, language, country, awards, poster, metascore, imdbId, type);
 
                     movies.add(movie);
                 }

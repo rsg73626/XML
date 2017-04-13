@@ -30,8 +30,6 @@ public class Movie implements Serializable{
     private String awards;
     private String poster;
     private String metascore;
-    private float imdbRating;
-    private int imdbVotes;
     private String imdbId;
     private String type;
 
@@ -39,7 +37,7 @@ public class Movie implements Serializable{
         this.actors = new ArrayList<Actor>();
     }
 
-    public Movie(String title, int year, String rated, String released, String runtime, String[] genres, String director, String writer, List<Actor> actors, String plot, String language, String country, String awards, String poster, String metascore, float imdbRating, int imdbVotes, String imdbId, String type) {
+    public Movie(String title, int year, String rated, String released, String runtime, String[] genres, String director, String writer, List<Actor> actors, String plot, String language, String country, String awards, String poster, String metascore, String imdbId, String type) {
         this.title = title;
         this.year = year;
         this.rated = rated;
@@ -55,29 +53,9 @@ public class Movie implements Serializable{
         this.awards = awards;
         this.poster = poster;
         this.metascore = metascore;
-        this.imdbRating = imdbRating;
-        this.imdbVotes = imdbVotes;
         this.imdbId = imdbId;
         this.type = type;
     }
-
-    @Override
-    public String toString() {
-        return "Movie{" + "title=" + title + ", year=" + year + ", rated=" + rated + ", released=" + released + ", runtime=" + runtime + ", genres=" + genres + ", director=" + director + ", writer=" + writer + ", actors=" + actors + ", plot=" + plot + ", language=" + language + ", country=" + country + ", awards=" + awards + ", poster=" + poster + ", metascore=" + metascore + ", imdbRating=" + imdbRating + ", imdbVotes=" + imdbVotes + ", imdbId=" + imdbId + ", type=" + type + '}';
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    
-    
-    
-    
 
     public String getTitle() {
         return title;
@@ -167,6 +145,14 @@ public class Movie implements Serializable{
         this.language = language;
     }
 
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
     public String getAwards() {
         return awards;
     }
@@ -191,22 +177,6 @@ public class Movie implements Serializable{
         this.metascore = metascore;
     }
 
-    public float getImdbRating() {
-        return imdbRating;
-    }
-
-    public void setImdbRating(float imdbRating) {
-        this.imdbRating = imdbRating;
-    }
-
-    public int getImdbVotes() {
-        return imdbVotes;
-    }
-
-    public void setImdbVotes(int imdbVotes) {
-        this.imdbVotes = imdbVotes;
-    }
-
     public String getImdbId() {
         return imdbId;
     }
@@ -222,6 +192,12 @@ public class Movie implements Serializable{
     public void setType(String type) {
         this.type = type;
     }
+
+    @Override
+    public String toString() {
+        return "Movie{" + "title=" + title + ", year=" + year + ", rated=" + rated + ", released=" + released + ", runtime=" + runtime + ", genres=" + genres + ", director=" + director + ", writer=" + writer + ", actors=" + actors + ", plot=" + plot + ", language=" + language + ", country=" + country + ", awards=" + awards + ", poster=" + poster + ", metascore=" + metascore + ", imdbId=" + imdbId + ", type=" + type + '}';
+    }
+
     
     
 }
